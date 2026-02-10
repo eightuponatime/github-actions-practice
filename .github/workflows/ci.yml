@@ -13,3 +13,18 @@ jobs:
  
     - name: Run echo command 
       run: echo "CI is working!" 
+
+    - name: "print current date"
+      run: date
+
+    - name: "all files output"
+      run: ls -la
+
+    - name: where am i and who am i
+      run: |
+        echo "User: $(whoami)"
+        echo "OS: $(uname -a)"
+        echo "CPU:"
+        lscpu | head -n 5
+        echo "Memory:"
+        free -h
